@@ -1,0 +1,100 @@
+.banner-img {
+  margin-top: 60px;
+}
+
+.home-page h1 {
+  color: gray;
+  font-family: 'Playfair Display', serif;
+}
+.home-page {
+  margin-top: 100px !important;
+}
+.home-page .card {
+  background-color: rgba(128, 128, 128, 0.097);
+}
+.home-page .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-page .card-price {
+  color: green;
+  font-weight: bold;
+}
+.home-page button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+}
+
+.home-page .card img:hover {
+  transform: scale(0.9);
+}
+
+.home-page .card-img-top {
+  height: 200px !important;
+}
+/* ==================
+filters
+============== */
+.filters h5 {
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.loadmore {
+  color: green;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+
+@media (max-width: 767px) {
+  .row-cols-md-4 .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .row-cols-md-4 .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /* .d-flex {
+    display: flex;
+    flex-direction: column;
+  } */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .row-cols-md-4 .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}

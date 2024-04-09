@@ -1,0 +1,33 @@
+.contact-page {
+  background-color: #f8f9fa;
+  padding-bottom: 90px;
+}
+
+.contact-header {
+  background-color: #343a40;
+  padding: 5px 0;
+  margin-top: 80px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+}
+
+.contact-info {
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.contact-detail {
+  margin-bottom: 20px;
+}
+
+.contact-detail a {
+  color: #007bff; /* Bootstrap primary color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+  }
+}
