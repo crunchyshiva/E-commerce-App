@@ -9,6 +9,7 @@ import { Checkbox, Radio } from 'antd';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import './Styles/HomePage.css';
+import API_URL from '../config/api';
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
@@ -25,7 +26,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        `${REACT_APP_API}/api/v1/category/get-category`,
+        `${API_URL}/api/v1/category/get-category`,
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -44,7 +45,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        `${REACT_APP_API}/api/v1/product/product-count`,
+        `${API_URL}/api/v1/product/product-count`,
       );
       setTotal(data?.total);
     } catch (error) {
@@ -62,7 +63,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `${REACT_APP_API}/api/v1/product/product-list/${page}`,
+        `${API_URL}/api/v1/product/product-list/${page}`,
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -77,7 +78,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `${REACT_APP_API}/api/v1/product/product-list/${page}`,
+        `${API_URL}/api/v1/product/product-list/${page}`,
       );
       setLoading(false);
       setProducts(data.products);
@@ -113,7 +114,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `${REACT_APP_API}/api/v1/product/product-filters`,
+        `${API_URL}/api/v1/product/product-filters`,
         {
           checked,
           radio,

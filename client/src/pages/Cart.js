@@ -8,6 +8,7 @@ import { AiFillWarning } from 'react-icons/ai';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import './Styles/Cartstyle.css';
+import API_URL from '../config/api';
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
@@ -21,7 +22,7 @@ const CartPage = () => {
     const getToken = async () => {
       try {
         const { data } = await axios.get(
-          `${REACT_APP_API}/api/v1/product/braintree/token`,
+          `${API_URL}/api/v1/product/braintree/token`,
         );
         setClientToken(data?.clientToken);
       } catch (error) {
@@ -62,7 +63,7 @@ const CartPage = () => {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
       const { data } = await axios.post(
-        `${REACT_APP_API}/api/v1/product/braintree/payment`,
+        `${API_URL}/api/v1/product/braintree/payment`,
         {
           nonce,
           cart,

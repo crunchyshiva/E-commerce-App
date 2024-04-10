@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import '../Styles/Authstyles.css';
+import API_URL from '../../config/api';
 
 const ForgotPasssword = () => {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const ForgotPasssword = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${REACT_APP_API}/api/v1/auth/forgot-password`,
+        `${API_URL}/api/v1/auth/forgot-password`,
         {
           email,
           newPassword,

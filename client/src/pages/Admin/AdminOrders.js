@@ -6,6 +6,7 @@ import Layout from '../../components/Layout/Layout';
 import { useAuth } from '../../Context/auth';
 import moment from 'moment';
 import { Select } from 'antd';
+import API_URL from '../../config/api';
 const { Option } = Select;
 
 const AdminOrders = () => {
@@ -22,7 +23,7 @@ const AdminOrders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        `${REACT_APP_API}/api/v1/auth/all-orders`,
+        `${API_URL}/api/v1/auth/all-orders`,
       );
       setOrders(data);
       console.log(data);
@@ -38,7 +39,7 @@ const AdminOrders = () => {
   const handleChange = async (orderId, value) => {
     try {
       const { data } = await axios.put(
-        `${REACT_APP_API}/api/v1/auth/order-status/${orderId}`,
+        `${API_URL}/api/v1/auth/order-status/${orderId}`,
         {
           status: value,
         },

@@ -4,6 +4,7 @@ import Layout from './../../components/Layout/Layout';
 import { useAuth } from '../../Context/auth';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import API_URL from '../../config/api';
 const Profile = () => {
   //context
   const [auth, setAuth] = useAuth();
@@ -27,7 +28,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put('/api/v1/auth/profile', {
+      const { data } = await axios.put(`${API_URL}/api/v1/auth/profile`, {
         name,
         email,
         password,
