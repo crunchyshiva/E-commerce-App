@@ -50,7 +50,7 @@ const ProductDetails = () => {
         <div className="row product-details">
           <div className="col-md-6">
             <img
-              src={`/api/v1/product/product-photo/${product._id}`}
+              src={`${API_URL}/api/v1/product/product-photo/${product._id}`}
               className="card-img-top"
               alt={product.name}
               height="300"
@@ -114,7 +114,7 @@ const ProductDetails = () => {
             <div className="col-md-3 mb-4" key={p._id}>
               <div className="card">
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`${API_URL}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
