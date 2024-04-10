@@ -4,7 +4,7 @@ import Layout from './../components/Layout/Layout';
 import { useSearch } from '../Context/search';
 import { useCart } from '../Context/cart';
 import toast from 'react-hot-toast';
-import API_URL from '../../config/api';
+import API_URL from '../config/api';
 const Search = () => {
   const navigate = useNavigate();
   const [values, setValues] = useSearch();
