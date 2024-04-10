@@ -1,5 +1,4 @@
 import express from 'express';
-import colors from 'colors/index.js';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import connectDB from './config/db.js';
@@ -36,8 +35,5 @@ const PORT = process.env.PORT || 8080;
 
 //run listen
 app.listen(PORT, () => {
-  console.log(
-    `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgYellow
-      .white,
-  );
+  console.log(`Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`);
 });
